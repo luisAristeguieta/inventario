@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "15aeac2b-14ba-406a-bea3-42fcd28c0b7a",
+    "name": "Inventario Nodejs + React Native",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50753649",
+    "_collection_link": "https://go.postman.co/collection/50753649-15aeac2b-14ba-406a-bea3-42fcd28c0b7a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear Producto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Teclado Mecánico RGB\",\r\n  \"precio\": 45.99,\r\n  \"categoria\": \"Periféricos\",\r\n  \"fotoBase64\": null\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ver Productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Producto",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"precio\": 39.50,\r\n  \"categoria\": \"Accesorios PC\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/productos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "productos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Producto",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"precio\": 39.50,\r\n  \"categoria\": \"Accesorios PC\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/productos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "productos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
